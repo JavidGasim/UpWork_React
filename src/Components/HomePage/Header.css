@@ -1,0 +1,129 @@
+.header-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(27, 18, 18, 0.1);
+  overflow: hidden;
+  height: 50px;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.header-leftside-container {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: transform 0.3s ease;
+}
+
+.header-leftside-container > h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  cursor: default;
+}
+
+.why-upwork {
+  display: none;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
+  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-leftside-container > h3 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: #666;
+  }
+  &:active {
+    color: #666;
+    transform: translateY(2px);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-within {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px dashed #666;
+    outline-offset: 2px;
+  }
+  &:focus-visible::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-color: #666;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: scale(0);
+  }
+}
+
+.header-leftside-container > h3:hover ~ .why-upwork {
+  display: block;
+}
+
+.why-upwork > h4 {
+  display: flex;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-rightside-container {
+  flex-basis: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-rightside-container > button {
+  margin-left: 10px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #666;
+  }
+  &:active {
+    background-color: #444;
+    transform: translateY(2px);
+  }
+}
